@@ -1,0 +1,127 @@
+%%
+% NYU Modern Formal Color Letterhead
+% LaTeX Template
+% Jan 2024
+%
+% Adapted from NYU letter Microsoft Word template
+% and Chris Hoofnagle's Berkeley letter template
+% https://www.overleaf.com/latex/templates/berkeley-2020-letterhead-4-color-formal-version/ryrsfvdsztpq
+% License: faculty and staff of New York University are free to use this template
+%%
+
+\documentclass[12pt,letterpaper]{letter} %this controls the paper style and font size
+\usepackage{graphicx} % necessary for logos
+\usepackage{lipsum} %you can delete this
+\usepackage{parskip} % for spacing
+\usepackage{geometry} % so that page 2> have 1" margins
+\usepackage{fancyhdr} % for fancy headers
+\usepackage{lastpage} 
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{} % footer for pages 2 on
+% \lfoot{\footnotesize {\textit{Letter from \Who{} regarding ...}}} % Left footer
+\cfoot{} % Change for center footer
+% \rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % Right footer page #s 
+\renewcommand{\footrulewidth}{0pt}
+
+
+%load NYU monsterrat font
+
+\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+%Sender Information -- Edit this to fill in the header
+\def\Who{Angela Cortecchia} % Fill in your name here
+\def\Title{Ph.D. Student} % Your title
+\def\What{Computer Science and Engineering}
+\def\Where{University of Bologna (Italy)} % Your department/institution
+\def\Address{Via dell'Università 50} % Your address
+\def\CityZip{ - Cesena, IT, 47521} % Your city, zip code, country, etc
+\def\Email{angela.cortecchia@unibo.it} % Your email address
+\def\URL{https://www.unibo.it/sitoweb/angela.cortecchia/en}
+%\def\TEL{Phone: } % Your phone number
+%\def\TELM{Mobile: } % Do you dare put your mobile here? How about a fax?
+%\def\URL{https://*.nyu.edu} % Your URL
+
+%first page margins are different to accommodate the letterhead
+
+\topmargin=-1.1in % Moves the top margin; here it is a negative value to move the text up
+\textheight=9.5in % Total text height for this page
+\oddsidemargin=-10pt % Left margin; widened here with a negative value
+\textwidth=7in % Text width
+% \let\raggedleft\raggedright % Makes the date appear on the left
+
+\begin{document}
+
+% \begin{document}{\textbf{RE:} Application for \textbf{SPACERAISE} summer school}
+
+\begin{center}
+
+\begin{picture}(1000,1)
+    \put(400, -20){\includegraphics[width=0.2\textwidth]{images/unibo-logo.png}}
+    \put(0,33){\textbf{\footnotesize \Who, \Title }}
+    \put(0,22){\footnotesize \What }
+    \put(0,11){\footnotesize \Where }
+    \put(0,0){\footnotesize \Address \CityZip }
+    % \put(250,22){\footnotesize \CityZip }
+    %\put(350,11){\footnotesize \TEL }
+    %\put(350,0){\footnotesize \TELM } % Comment this out to omit your mobile
+    % \put(0,-11){\footnotesize \Email }
+    % \put(0, -22){\footnotesize \URL }
+    %\put(0,-28){\rule{\textwidth}{0.4pt}}
+\end{picture}
+\end{center}
+\vspace{10mm}
+
+\textit{Dear Admissions Committee of \textbf{[fill]}}, \\ 
+
+
+I am writing to express my keen interest in attending \textit{[fill]}.
+%
+As a doctoral candidate researching Aggregate Computing, 
+my work revolves around enabling autonomous coordination and collaboration among heterogeneous devices, 
+encapsulated in the topic ``Towards Collective Operating Systems through Aggregate Computing''.
+
+The intersection between Aggregate Computing and \textit{[fill]} presents a fascinating and promising avenue for innovation. 
+%
+The themes covered \textit{[fill]}.
+%
+These topics directly relate to the principles of collective behavior and resilient coordination that aggregate computing seeks to address, 
+offering a unique opportunity to explore their application in \textit{[fill]} to design scalable, 
+robust frameworks for autonomous multi-robot collaboration in challenging environments,
+while also drawing inspiration from the complexities of \textit{[fill]} to enrich my research perspectives.
+
+My \textit{[fill]} for \textit{[fill]} and its associated technological frontiers has always driven my curiosity about 
+how cutting-edge research can address real-world challenges. 
+%
+By participating in \textit{[fill]}, 
+I aim to connect my expertise in Aggregate Computing with the unique demands of \textit{[fill]}, 
+gaining new insights into the design of adaptive, 
+autonomous systems while broadening the scope of my research into novel and impactful applications.
+
+I am confident that this opportunity will enrich my understanding of\textit{[fill]} 
+and inspire innovative approaches to my doctoral work. 
+%
+I look forward to the chance to engage with experts in the field, 
+exchange ideas with fellow researchers, 
+and contribute to the dialogue on \textit{[fill]}. 
+
+
+Thank you for your time and consideration
+I look forward to hearing from you,
+
+\textbf{\emph{\Who{}}}\newline \Email\newline \small{\URL}
+% \includegraphics[]{} You can put an image of your signature here.
+
+
+% \ps{P.S. Fiat Lux}
+
+% \cc{Carbon Copy 1\\Carbon Copy 2}
+
+% \encl{Memorandum} %for enclosures
+
+% \end{letter}
+
+\end{document}
