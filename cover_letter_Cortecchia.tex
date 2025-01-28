@@ -9,7 +9,8 @@
 % License: faculty and staff of New York University are free to use this template
 %%
 
-\documentclass[12pt,letterpaper]{letter} %this controls the paper style and font size
+\documentclass[12pt,a4paper]{letter} %this controls the paper style and font size
+\usepackage{float}
 \usepackage{graphicx} % necessary for logos
 \usepackage{lipsum} %you can delete this
 \usepackage{parskip} % for spacing
@@ -33,14 +34,15 @@
 \renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
 %Sender Information -- Edit this to fill in the header
-\def\Who{Angela Cortecchia} % Fill in your name here
-\def\Title{Ph.D. Student} % Your title
-\def\What{Computer Science and Engineering}
-\def\Where{University of Bologna (Italy)} % Your department/institution
-\def\Address{Via dell'Università 50} % Your address
-\def\CityZip{ - Cesena, IT, 47521} % Your city, zip code, country, etc
-\def\Email{angela.cortecchia@unibo.it} % Your email address
-\def\URL{https://www.unibo.it/sitoweb/angela.cortecchia/en}
+\newcommand{\Who}{Angela Cortecchia} % Fill in your name here
+\newcommand{\Title}{Ph.D. Student} % Your title
+\newcommand{\What}{Computer Science and Engineering}
+\newcommand{\Department}{Department of Computer Science and Engineering} % Your department
+\newcommand{\Affiliation}{Alma Mater Studiorum---Università di Bologna} % Your department
+\newcommand{\Address}{Via dell'Università, 50} % Your address
+\newcommand{\CityZip}{47521, Cesena (FC) Italy} % Your city, zip code, country, etc
+\newcommand{\Email}{angela.cortecchia@unibo.it} % Your email address
+\newcommand{\URL}{https://www.unibo.it/sitoweb/angela.cortecchia/en}
 %\def\TEL{Phone: } % Your phone number
 %\def\TELM{Mobile: } % Do you dare put your mobile here? How about a fax?
 %\def\URL{https://*.nyu.edu} % Your URL
@@ -57,26 +59,29 @@
 
 % \begin{document}{\textbf{RE:} Application for \textbf{SPACERAISE} summer school}
 
-\begin{center}
+% \begin{letter}{\textbf{RE:} Recommendation letter for SPACERAISE}
 
-\begin{picture}(1000,1)
-    \put(400, -20){\includegraphics[width=0.2\textwidth]{images/unibo-logo.png}}
-    \put(0,33){\textbf{\footnotesize \Who, \Title }}
-    \put(0,22){\footnotesize \What }
-    \put(0,11){\footnotesize \Where }
-    \put(0,0){\footnotesize \Address \CityZip }
-    % \put(250,22){\footnotesize \CityZip }
-    %\put(350,11){\footnotesize \TEL }
-    %\put(350,0){\footnotesize \TELM } % Comment this out to omit your mobile
-    % \put(0,-11){\footnotesize \Email }
-    % \put(0, -22){\footnotesize \URL }
-    %\put(0,-28){\rule{\textwidth}{0.4pt}}
-\end{picture}
-\end{center}
+\begin{minipage}{0.37\textwidth}
+    \includegraphics[width=\textwidth]{images/DIP INFORMATICA-SCIENZA E INGEGNERIA_DISI_EN.png} % Replace "example-image" with your image file path
+\end{minipage}%
+\hfill
+\begin{minipage}{0.4\textwidth}
+    \small
+    \textbf{\Who{}}, \Title{} \\
+    \vspace{0.01\textwidth} \\
+%    \Department{}\\
+%    \Affiliation{}\\
+    \scriptsize
+    \Address{}\\
+    \CityZip{}\\
+    \Email{}\\
+    % \TEL{}\\
+    \URL{}\\
+\end{minipage}\label{fig:figure}
+
 \vspace{10mm}
 
-\textit{Dear Admissions Committee of \textbf{[fill]}}, \\ 
-
+Dear Admissions Committee of \textbf{[fill]},
 
 I am writing to express my keen interest in attending \textit{[fill]}.
 %
@@ -112,7 +117,10 @@ and contribute to the dialogue on \textit{[fill]}.
 Thank you for your time and consideration
 I look forward to hearing from you,
 
-\textbf{\emph{\Who{}}}\newline \Email\newline \small{\URL}
+
+\vspace{0.1\textwidth}
+
+\hfill{}\Who
 % \includegraphics[]{} You can put an image of your signature here.
 
 
